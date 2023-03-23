@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MadudaScenes/Menu.unity
+    guid: 6fc35cd03b0486344be929666e939f33
+  - enabled: 1
+    path: Assets/Scenes/MadudaScenes/ChoseCharacterMenu.unity
+    guid: 4ef9a418d03602d43a8126d94d27e16b
+  - enabled: 1
+    path: Assets/Scenes/MadudaScenes/OptionsMenu.unity
+    guid: e857dcb844458024080ed677f19042e5
+  - enabled: 1
+    path: Assets/Scenes/MadudaScenes/Credits.unity
+    guid: abb1e6b0a529b7f448d8cb622c367700
   m_configObjects: {}
