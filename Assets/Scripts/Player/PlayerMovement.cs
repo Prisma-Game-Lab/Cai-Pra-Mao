@@ -8,11 +8,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int playerIndex;
     [SerializeField] private float MaxplayerSpeed;
     [SerializeField] private float playerSpeed;
+    [SerializeField] private float accel;
     [SerializeField] private PlayerMovement opponent;
     private Rigidbody2D rb;
     private Vector2 rawMovementVec;
     private Vector2 movementVec;
     public float jumpAmount = 10;
+    private int normalizeHorizontalSpeed;
 
     void Awake()
     {
@@ -23,25 +25,45 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        playerSpeed = movementVec.magnitude;
+
     }
 
     private void FixedUpdate()
     {
+        UpdateDirection();
         Move();
         LookAtOpponent();
     }
 
     public void Move()
     {
-        // Limita a magnitude do vetor de movimento a 1, para evitar que movimentos na diagonal sejam mais rapidos
-        movementVec = Vector2.ClampMagnitude(rawMovementVec, 1);
+        Vector2 targetVelocity;
 
-        // Escala o vetor de acordo com a velocidade do player e o tempo desde o ultimo frame
-        movementVec *= MaxplayerSpeed * Time.fixedDeltaTime;
+        if (normalizeHorizontalSpeed != 0)
+        {
+            targetVelocity = new Vector2(playerSpeed * normalizeHorizontalSpeed, rb.velocity.y);
+            rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.deltaTime * accel);
+        }
+        else
+        {
+            targetVelocity = new Vector2(playerSpeed * normalizeHorizontalSpeed, rb.velocity.y);
+            rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.deltaTime * accel);
+        }
+    }
 
-        // Aplica a movimentacao
-        rb.MovePosition(rb.position + movementVec);
+    private void UpdateDirection()
+    {
+        if (rawMovementVec.x > 0)
+        {
+            normalizeHorizontalSpeed = 1;
+        }
+        else if (rawMovementVec.x < 0)
+        {
+            normalizeHorizontalSpeed = -1;
+        }
+        else
+            normalizeHorizontalSpeed = 0;
+
     }
 
     private void LookAtOpponent()
@@ -55,8 +77,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        rb.AddForce(Vector2.up*jumpAmount, ForceMode2D.Impulse);
-        return;
+        Debug.Log(Vector2.up * jumpAmount);
+        rb.velocity = new Vector2(rb.velocity.x, jumpAmount);
+        Debug.Log(rb.velocity);
     }
 
     public void UpdateMovementVec(Vector2 rawMovementVec)

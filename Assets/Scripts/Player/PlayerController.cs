@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext ctx)
     {
-        playerMovement.Jump();
+        if (ctx.performed)
+            playerMovement.Jump();
     }
 }

@@ -35,6 +35,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""55e19c6f-43ae-4eab-adf1-9c583a124f67"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -158,52 +167,37 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Jump"",
-            ""id"": ""9b1c1705-eb6a-4b92-b3a0-3064ff1abf42"",
-            ""actions"": [
-                {
-                    ""name"": ""TAB"",
-                    ""type"": ""Button"",
-                    ""id"": ""ab6cbcd9-7601-4f64-afa9-b9dc3b9a15ff"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""SPACE"",
-                    ""type"": ""Button"",
-                    ""id"": ""63123c44-6494-4b6c-a76c-4e010cd4fcae"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
                     ""name"": """",
-                    ""id"": ""2f512882-5734-4a2b-add8-b8e5b20db859"",
+                    ""id"": ""6d6f5481-ce47-4561-8ef3-63646143b2b3"",
                     ""path"": ""<Keyboard>/tab"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""TAB"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5c0af996-36cb-4078-b36b-69ce8602735f"",
+                    ""id"": ""6b9bcfc7-a258-48ae-b4a5-42d0c4c842b0"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""SPACE"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""79f70d26-3831-4aa8-9a67-f5d358052958"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -215,10 +209,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         // Actions
         m_Actions = asset.FindActionMap("Actions", throwIfNotFound: true);
         m_Actions_Movement = m_Actions.FindAction("Movement", throwIfNotFound: true);
-        // Jump
-        m_Jump = asset.FindActionMap("Jump", throwIfNotFound: true);
-        m_Jump_TAB = m_Jump.FindAction("TAB", throwIfNotFound: true);
-        m_Jump_SPACE = m_Jump.FindAction("SPACE", throwIfNotFound: true);
+        m_Actions_Jump = m_Actions.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -281,11 +272,13 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Actions;
     private List<IActionsActions> m_ActionsActionsCallbackInterfaces = new List<IActionsActions>();
     private readonly InputAction m_Actions_Movement;
+    private readonly InputAction m_Actions_Jump;
     public struct ActionsActions
     {
         private @PlayerActions m_Wrapper;
         public ActionsActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Actions_Movement;
+        public InputAction @Jump => m_Wrapper.m_Actions_Jump;
         public InputActionMap Get() { return m_Wrapper.m_Actions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -298,6 +291,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
         }
 
         private void UnregisterCallbacks(IActionsActions instance)
@@ -305,6 +301,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
         }
 
         public void RemoveCallbacks(IActionsActions instance)
@@ -322,67 +321,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         }
     }
     public ActionsActions @Actions => new ActionsActions(this);
-
-    // Jump
-    private readonly InputActionMap m_Jump;
-    private List<IJumpActions> m_JumpActionsCallbackInterfaces = new List<IJumpActions>();
-    private readonly InputAction m_Jump_TAB;
-    private readonly InputAction m_Jump_SPACE;
-    public struct JumpActions
-    {
-        private @PlayerActions m_Wrapper;
-        public JumpActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @TAB => m_Wrapper.m_Jump_TAB;
-        public InputAction @SPACE => m_Wrapper.m_Jump_SPACE;
-        public InputActionMap Get() { return m_Wrapper.m_Jump; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(JumpActions set) { return set.Get(); }
-        public void AddCallbacks(IJumpActions instance)
-        {
-            if (instance == null || m_Wrapper.m_JumpActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_JumpActionsCallbackInterfaces.Add(instance);
-            @TAB.started += instance.OnTAB;
-            @TAB.performed += instance.OnTAB;
-            @TAB.canceled += instance.OnTAB;
-            @SPACE.started += instance.OnSPACE;
-            @SPACE.performed += instance.OnSPACE;
-            @SPACE.canceled += instance.OnSPACE;
-        }
-
-        private void UnregisterCallbacks(IJumpActions instance)
-        {
-            @TAB.started -= instance.OnTAB;
-            @TAB.performed -= instance.OnTAB;
-            @TAB.canceled -= instance.OnTAB;
-            @SPACE.started -= instance.OnSPACE;
-            @SPACE.performed -= instance.OnSPACE;
-            @SPACE.canceled -= instance.OnSPACE;
-        }
-
-        public void RemoveCallbacks(IJumpActions instance)
-        {
-            if (m_Wrapper.m_JumpActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IJumpActions instance)
-        {
-            foreach (var item in m_Wrapper.m_JumpActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_JumpActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public JumpActions @Jump => new JumpActions(this);
     public interface IActionsActions
     {
         void OnMovement(InputAction.CallbackContext context);
-    }
-    public interface IJumpActions
-    {
-        void OnTAB(InputAction.CallbackContext context);
-        void OnSPACE(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }
