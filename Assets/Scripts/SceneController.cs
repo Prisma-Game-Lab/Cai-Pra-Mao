@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class SceneController : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private TMP_Text roomCode;
     private bool isPaused;
 
     // Start is called before the first frame update
     void Start()
     {
         isPaused = false;
-        pauseMenu.SetActive(false);
+        if (pauseMenu)
+            pauseMenu.SetActive(false);
     }
 
     public void TogglePause()
@@ -38,6 +42,12 @@ public class SceneController : MonoBehaviour
             TogglePause();
 
         SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void JoinGame(int sceneIndex)
+    {
+        if (roomCode.text != "")
+            ChangeScene(sceneIndex);
     }
 
     public void QuitGame()
