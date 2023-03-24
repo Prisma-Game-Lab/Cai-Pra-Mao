@@ -24,7 +24,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     ""name"": ""PlayerActions"",
     ""maps"": [
         {
-            ""name"": ""New action map"",
+            ""name"": ""Actions"",
             ""id"": ""46c4d64e-a265-4894-8595-14c98bde4653"",
             ""actions"": [
                 {
@@ -98,9 +98,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // New action map
-        m_Newactionmap = asset.FindActionMap("New action map", throwIfNotFound: true);
-        m_Newactionmap_Movement = m_Newactionmap.FindAction("Movement", throwIfNotFound: true);
+        // Actions
+        m_Actions = asset.FindActionMap("Actions", throwIfNotFound: true);
+        m_Actions_Movement = m_Actions.FindAction("Movement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -159,52 +159,52 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // New action map
-    private readonly InputActionMap m_Newactionmap;
-    private List<INewactionmapActions> m_NewactionmapActionsCallbackInterfaces = new List<INewactionmapActions>();
-    private readonly InputAction m_Newactionmap_Movement;
-    public struct NewactionmapActions
+    // Actions
+    private readonly InputActionMap m_Actions;
+    private List<IActionsActions> m_ActionsActionsCallbackInterfaces = new List<IActionsActions>();
+    private readonly InputAction m_Actions_Movement;
+    public struct ActionsActions
     {
         private @PlayerActions m_Wrapper;
-        public NewactionmapActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Newactionmap_Movement;
-        public InputActionMap Get() { return m_Wrapper.m_Newactionmap; }
+        public ActionsActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_Actions_Movement;
+        public InputActionMap Get() { return m_Wrapper.m_Actions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(NewactionmapActions set) { return set.Get(); }
-        public void AddCallbacks(INewactionmapActions instance)
+        public static implicit operator InputActionMap(ActionsActions set) { return set.Get(); }
+        public void AddCallbacks(IActionsActions instance)
         {
-            if (instance == null || m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_ActionsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_ActionsActionsCallbackInterfaces.Add(instance);
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
         }
 
-        private void UnregisterCallbacks(INewactionmapActions instance)
+        private void UnregisterCallbacks(IActionsActions instance)
         {
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
         }
 
-        public void RemoveCallbacks(INewactionmapActions instance)
+        public void RemoveCallbacks(IActionsActions instance)
         {
-            if (m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_ActionsActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(INewactionmapActions instance)
+        public void SetCallbacks(IActionsActions instance)
         {
-            foreach (var item in m_Wrapper.m_NewactionmapActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_ActionsActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_NewactionmapActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_ActionsActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public NewactionmapActions @Newactionmap => new NewactionmapActions(this);
-    public interface INewactionmapActions
+    public ActionsActions @Actions => new ActionsActions(this);
+    public interface IActionsActions
     {
         void OnMovement(InputAction.CallbackContext context);
     }
