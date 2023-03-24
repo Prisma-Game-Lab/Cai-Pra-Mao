@@ -160,6 +160,54 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Jump"",
+            ""id"": ""9b1c1705-eb6a-4b92-b3a0-3064ff1abf42"",
+            ""actions"": [
+                {
+                    ""name"": ""TAB"",
+                    ""type"": ""Button"",
+                    ""id"": ""ab6cbcd9-7601-4f64-afa9-b9dc3b9a15ff"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SPACE"",
+                    ""type"": ""Button"",
+                    ""id"": ""63123c44-6494-4b6c-a76c-4e010cd4fcae"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""2f512882-5734-4a2b-add8-b8e5b20db859"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""TAB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c0af996-36cb-4078-b36b-69ce8602735f"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SPACE"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -167,6 +215,10 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         // Actions
         m_Actions = asset.FindActionMap("Actions", throwIfNotFound: true);
         m_Actions_Movement = m_Actions.FindAction("Movement", throwIfNotFound: true);
+        // Jump
+        m_Jump = asset.FindActionMap("Jump", throwIfNotFound: true);
+        m_Jump_TAB = m_Jump.FindAction("TAB", throwIfNotFound: true);
+        m_Jump_SPACE = m_Jump.FindAction("SPACE", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -270,8 +322,67 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         }
     }
     public ActionsActions @Actions => new ActionsActions(this);
+
+    // Jump
+    private readonly InputActionMap m_Jump;
+    private List<IJumpActions> m_JumpActionsCallbackInterfaces = new List<IJumpActions>();
+    private readonly InputAction m_Jump_TAB;
+    private readonly InputAction m_Jump_SPACE;
+    public struct JumpActions
+    {
+        private @PlayerActions m_Wrapper;
+        public JumpActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @TAB => m_Wrapper.m_Jump_TAB;
+        public InputAction @SPACE => m_Wrapper.m_Jump_SPACE;
+        public InputActionMap Get() { return m_Wrapper.m_Jump; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(JumpActions set) { return set.Get(); }
+        public void AddCallbacks(IJumpActions instance)
+        {
+            if (instance == null || m_Wrapper.m_JumpActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_JumpActionsCallbackInterfaces.Add(instance);
+            @TAB.started += instance.OnTAB;
+            @TAB.performed += instance.OnTAB;
+            @TAB.canceled += instance.OnTAB;
+            @SPACE.started += instance.OnSPACE;
+            @SPACE.performed += instance.OnSPACE;
+            @SPACE.canceled += instance.OnSPACE;
+        }
+
+        private void UnregisterCallbacks(IJumpActions instance)
+        {
+            @TAB.started -= instance.OnTAB;
+            @TAB.performed -= instance.OnTAB;
+            @TAB.canceled -= instance.OnTAB;
+            @SPACE.started -= instance.OnSPACE;
+            @SPACE.performed -= instance.OnSPACE;
+            @SPACE.canceled -= instance.OnSPACE;
+        }
+
+        public void RemoveCallbacks(IJumpActions instance)
+        {
+            if (m_Wrapper.m_JumpActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IJumpActions instance)
+        {
+            foreach (var item in m_Wrapper.m_JumpActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_JumpActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public JumpActions @Jump => new JumpActions(this);
     public interface IActionsActions
     {
         void OnMovement(InputAction.CallbackContext context);
+    }
+    public interface IJumpActions
+    {
+        void OnTAB(InputAction.CallbackContext context);
+        void OnSPACE(InputAction.CallbackContext context);
     }
 }

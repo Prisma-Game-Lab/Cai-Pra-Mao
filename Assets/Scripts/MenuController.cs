@@ -26,5 +26,9 @@ public class MenuController : MonoBehaviour
     {
       SceneManager.LoadScene("Menu");
     }
+    public void StartFight ()
+    {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 7);
+    }
 
 }

@@ -138,6 +138,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Jump",
+            "id": "9b1c1705-eb6a-4b92-b3a0-3064ff1abf42",
+            "actions": [
+                {
+                    "name": "TAB",
+                    "type": "Button",
+                    "id": "ab6cbcd9-7601-4f64-afa9-b9dc3b9a15ff",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SPACE",
+                    "type": "Button",
+                    "id": "63123c44-6494-4b6c-a76c-4e010cd4fcae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2f512882-5734-4a2b-add8-b8e5b20db859",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TAB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c0af996-36cb-4078-b36b-69ce8602735f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SPACE",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 rawMovementVec;
     private Vector2 movementVec;
+    public float jumpAmount = 10;
 
     void Awake()
     {
@@ -54,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
+        rb.AddForce(Vector2.up*jumpAmount, ForceMode2D.Impulse);
         return;
     }
 
