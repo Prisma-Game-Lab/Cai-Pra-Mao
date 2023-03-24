@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Linq;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private PlayerInput playerInput;
     [SerializeField] private PlayerMovement playerMovement;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        playerInput = GetComponent<PlayerInput>();
+        var playerMovements = FindObjectsOfType<PlayerMovement>();
+        var index = playerInput.playerIndex;
+        playerMovement = playerMovements.FirstOrDefault(m => m.GetPlayerIndex() == index);
     }
 
     // Update is called once per frame
@@ -26,7 +30,8 @@ public class PlayerController : MonoBehaviour
         if (moveVec.y > 0)
             moveVec.y = 0;
 
-        playerMovement.UpdateMovementVec(moveVec);
+        if (playerMovement)
+            playerMovement.UpdateMovementVec(moveVec);
     }
 
     public void OnJump(InputAction.CallbackContext ctx)

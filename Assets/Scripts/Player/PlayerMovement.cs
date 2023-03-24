@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private int playerIndex;
     [SerializeField] private float MaxplayerSpeed;
     [SerializeField] private float playerSpeed;
+    [SerializeField] private PlayerMovement opponent;
     private Rigidbody2D rb;
     private Vector2 rawMovementVec;
     private Vector2 movementVec;
@@ -13,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponentInParent<Rigidbody2D>();
+        var playerMovements = FindObjectsOfType<PlayerMovement>();
+        opponent = playerMovements.FirstOrDefault(m => m.GetPlayerIndex() != playerIndex);
     }
 
     void Update()
@@ -23,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        LookAtOpponent();
     }
 
     public void Move()
@@ -37,6 +43,15 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + movementVec);
     }
 
+    private void LookAtOpponent()
+    {
+        var relativePoint = transform.InverseTransformPoint(opponent.gameObject.transform.position);
+        if (relativePoint.x < 0.0)
+        {
+            transform.localScale *= -1;
+        }
+    }
+
     public void Jump()
     {
         return;
@@ -45,5 +60,10 @@ public class PlayerMovement : MonoBehaviour
     public void UpdateMovementVec(Vector2 rawMovementVec)
     {
         this.rawMovementVec = rawMovementVec;
+    }
+
+    public int GetPlayerIndex()
+    {
+        return playerIndex;
     }
 }
