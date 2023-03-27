@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
-  roomCode: 
+  roomCode: {fileID: 0}
 --- !u!1001 &287411962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -176,10 +176,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1875988930}
     m_Modifications:
+    - target: {fileID: 1575040458511329083, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9d17ff430cdb8a43a02d9fab6c4a63a, type: 3}
     - target: {fileID: 2051133264134201874, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_text
-      value: Criar Sala
+      value: criar sala
       objectReference: {fileID: 0}
+    - target: {fileID: 2051133264134201874, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e5e8934ee5f179d4b9d66f931e8d8c0c, type: 2}
+    - target: {fileID: 2051133264134201874, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3250868691446524002, guid: e5e8934ee5f179d4b9d66f931e8d8c0c, type: 2}
     - target: {fileID: 5011126704742832372, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Name
       value: 'CreateButton '
@@ -218,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5704754030682446433, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 50.78
       objectReference: {fileID: 0}
     - target: {fileID: 5704754030682446433, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_LocalScale.x
@@ -276,6 +288,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6365995797240085369, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -7.589999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365995797240085369, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.7950006
+      objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 0.6203275
@@ -290,15 +310,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.70461017
+      value: 0.9490196
       objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.70461017
+      value: 0.46666667
       objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.735849
+      value: 0.7058824
       objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -498,10 +518,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1875988930}
     m_Modifications:
+    - target: {fileID: 1575040458511329083, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9d17ff430cdb8a43a02d9fab6c4a63a, type: 3}
     - target: {fileID: 2051133264134201874, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_text
-      value: Entrar
+      value: ENTRAR
       objectReference: {fileID: 0}
+    - target: {fileID: 2051133264134201874, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e5e8934ee5f179d4b9d66f931e8d8c0c, type: 2}
+    - target: {fileID: 2051133264134201874, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3250868691446524002, guid: e5e8934ee5f179d4b9d66f931e8d8c0c, type: 2}
     - target: {fileID: 5011126704742832372, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Name
       value: JoinButton
@@ -540,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5704754030682446433, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 50.78
       objectReference: {fileID: 0}
     - target: {fileID: 5704754030682446433, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_LocalScale.x
@@ -598,6 +630,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6365995797240085369, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -7.589999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365995797240085369, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.7950006
+      objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 0.6203275
@@ -612,15 +652,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.70461017
+      value: 0.41960785
       objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.70461017
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.735849
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8530842532393998488, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -815,7 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.25882354, g: 0, b: 0.4117647, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
