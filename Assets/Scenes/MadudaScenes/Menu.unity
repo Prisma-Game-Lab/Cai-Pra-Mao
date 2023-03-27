@@ -283,7 +283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5704754030682446433, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -45
+      value: -48
       objectReference: {fileID: 0}
     - target: {fileID: 5704754030682446433, guid: eeb8288546cf6db4d9fb37d80fcf0106, type: 3}
       propertyPath: m_LocalRotation.w
@@ -651,7 +651,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -200.75983, y: 14.196045, z: -71.35472, w: 51.254883}
+  m_margin: {x: -78.43799, y: 14.196045, z: -2.11586, w: 51.254883}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1266,7 +1266,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: -90
+  m_Spacing: -179.7
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
