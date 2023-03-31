@@ -33,7 +33,11 @@ public class MenuController : MonoBehaviour
 
     public void GoController()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6); // por algum motivo o +6 me levou pra cena de indice 8
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
     }
 
+    public void GoBackSettings()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -6);
+    }
 }
