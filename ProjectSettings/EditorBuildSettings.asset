@@ -33,6 +33,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MadudaScenes/Game.unity
     guid: 1e06ef54979962c4096d418de66643b9
   - enabled: 1
-    path: Assets/Scenes/MadudaScenes/Controles.unity
+    path: Assets/Scenes/MadudaScenes/Controles_PS.unity
     guid: 683b0748adad52d488816d6cc8ed8192
+  - enabled: 1
+    path: Assets/Scenes/MadudaScenes/Controles_Xbox.unity
+    guid: 1b55231c1ec533b4ab22d600f63c4bf5
+  - enabled: 1
+    path: Assets/Scenes/MadudaScenes/Controles_Teclado.unity
+    guid: 5e3934ce26f05e54ab0814601f89476d
   m_configObjects: {}
