@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MadudaScenes/Game.unity
     guid: 1e06ef54979962c4096d418de66643b9
+  - enabled: 1
+    path: Assets/Scenes/MadudaScenes/Controles.unity
+    guid: 683b0748adad52d488816d6cc8ed8192
   m_configObjects: {}
