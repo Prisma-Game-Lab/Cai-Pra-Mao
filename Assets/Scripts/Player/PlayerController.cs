@@ -39,4 +39,9 @@ public class PlayerController : MonoBehaviour
         if (ctx.performed)
             playerMovement.Jump();
     }
+    public void OnDash(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+            StartCoroutine(playerMovement.Dash());
+    }
 }

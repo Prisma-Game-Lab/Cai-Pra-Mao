@@ -22,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
     private bool doubleJumped;
     public bool isFacingRight = true;
 
+    [SerializeField] private float dashTime;
+    [SerializeField] private float dashSpeed;
+    private bool isDashing;
+
     void Awake()
     {
         isGrounded = true;
@@ -32,10 +36,11 @@ public class PlayerMovement : MonoBehaviour
             isFacingRight = true;
         else
             isFacingRight = false;
+
     }
 
     private void FixedUpdate()
-    {
+    {   
         UpdateDirection();
         Move();
         CheckGrounded();
@@ -44,17 +49,17 @@ public class PlayerMovement : MonoBehaviour
     public void Move()
     {
         Vector2 targetVelocity;
-
-        if (normalizeHorizontalSpeed != 0)
+    
+        if (isDashing)
         {
-            targetVelocity = new Vector2(playerSpeed * normalizeHorizontalSpeed, rb.velocity.y);
-            rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.deltaTime * accel);
+            rb.velocity = new Vector2(dashSpeed * normalizeHorizontalSpeed, rb.velocity.y);
         }
         else
         {
             targetVelocity = new Vector2(playerSpeed * normalizeHorizontalSpeed, rb.velocity.y);
-            rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.deltaTime * accel);
+            rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.deltaTime * accel);       
         }
+        
     }
 
     private void UpdateDirection()
@@ -119,5 +124,14 @@ public class PlayerMovement : MonoBehaviour
     public int GetPlayerIndex()
     {
         return playerIndex;
+    }
+
+    public IEnumerator Dash()
+    {
+        isDashing = true;
+
+        yield return new WaitForSeconds(dashTime);
+
+        isDashing = false;
     }
 }
