@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {   
+    {
         UpdateDirection();
         Move();
         CheckGrounded();
@@ -49,17 +49,18 @@ public class PlayerMovement : MonoBehaviour
     public void Move()
     {
         Vector2 targetVelocity;
-    
+
         if (isDashing)
         {
-            rb.velocity = new Vector2(dashSpeed * normalizeHorizontalSpeed, rb.velocity.y);
+            int direction = isFacingRight ? 1 : -1;
+            rb.velocity = new Vector2(dashSpeed * direction, rb.velocity.y);
         }
         else
         {
             targetVelocity = new Vector2(playerSpeed * normalizeHorizontalSpeed, rb.velocity.y);
-            rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.deltaTime * accel);       
+            rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.deltaTime * accel);
         }
-        
+
     }
 
     private void UpdateDirection()
