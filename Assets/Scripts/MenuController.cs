@@ -31,7 +31,7 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 7);
     }
 
-    public void GoController()
+    public void GoControllerKeyboard()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
     }
