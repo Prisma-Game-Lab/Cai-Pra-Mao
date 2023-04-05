@@ -1387,7 +1387,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835548474}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1416,8 +1416,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 0.41960785, a: 1}
-    m_PressedColor: {r: 0.25882354, g: 0, b: 0.4117647, a: 1}
+    m_HighlightedColor: {r: 0, g: 1, b: 0.8352941, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1440,7 +1440,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 549380233}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: GoBackSettings
+        m_MethodName: GoKeyboardtoXbox
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3034,7 +3034,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835548474}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3063,8 +3063,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 0.41960785, a: 1}
-    m_PressedColor: {r: 0.25882354, g: 0, b: 0.4117647, a: 1}
+    m_HighlightedColor: {r: 0, g: 1, b: 0.8352941, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -3087,7 +3087,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 549380233}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: GoBackSettings
+        m_MethodName: GoKeyboardtoPS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4318,8 +4318,8 @@ RectTransform:
   - {fileID: 455004955}
   - {fileID: 197006397}
   - {fileID: 898849916}
-  - {fileID: 1439002687}
   - {fileID: 586818544}
+  - {fileID: 1439002687}
   - {fileID: 50175053}
   m_Father: {fileID: 549380232}
   m_RootOrder: 0

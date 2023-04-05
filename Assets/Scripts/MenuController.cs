@@ -38,6 +38,46 @@ public class MenuController : MonoBehaviour
 
     public void GoBackSettings()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -6);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 6);
+    }
+
+    public void GoBackSettingsPS()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 7);
+    }
+
+    public void GoBackSettingsXbox()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 8);
+    }
+
+    public void GoKeyboardtoPS()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void GoKeyboardtoXbox()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+
+    public void GoPStoKeyboard()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + -1);
+    }
+
+    public void GoPStoXbox()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void GoXboxtoPS()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void GoXboxtoKeyboard()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
 }

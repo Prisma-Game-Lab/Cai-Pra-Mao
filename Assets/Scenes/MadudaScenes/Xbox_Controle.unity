@@ -209,7 +209,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 549380233}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: GoBackSettings
+        m_MethodName: GoBackSettingsXbox
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0009994507, y: -1.3815999}
-  m_SizeDelta: {x: 470, y: 189.2296}
+  m_AnchoredPosition: {x: -0.0009994507, y: 7.5794}
+  m_SizeDelta: {x: 470, y: 207.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &197006396
 GameObject:
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (XBOX)
+  m_text: (Xbox)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed656cf6f1ab5b14c90df1459fb72f72, type: 2}
   m_sharedMaterial: {fileID: -1379110770527642243, guid: ed656cf6f1ab5b14c90df1459fb72f72, type: 2}
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -230.00357, y: -5.873701, z: -204.26416, w: 21.257751}
+  m_margin: {x: -245.15234, y: -5.873701, z: -219.41284, w: 21.257751}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -842,15 +842,15 @@ RectTransform:
   m_GameObject: {fileID: 586818543}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5613161, y: 0.5613161, z: 0.5613161}
+  m_LocalScale: {x: 0.561316, y: 0.561316, z: 0.561316}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835548474}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -270, y: 13.599976}
+  m_AnchoredPosition: {x: -269.99994, y: 13.59996}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &586818545
@@ -875,8 +875,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 0.41960785, a: 1}
-    m_PressedColor: {r: 0.25882354, g: 0, b: 0.4117647, a: 1}
+    m_HighlightedColor: {r: 0, g: 1, b: 0.8352941, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -899,7 +899,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 549380233}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: GoBackSettings
+        m_MethodName: GoXboxtoPS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1518,7 +1518,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1835548474}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1547,8 +1547,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 0.41960785, a: 1}
-    m_PressedColor: {r: 0.25882354, g: 0, b: 0.4117647, a: 1}
+    m_HighlightedColor: {r: 0, g: 1, b: 0.8352941, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1571,7 +1571,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 549380233}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: GoBackSettings
+        m_MethodName: GoXboxtoKeyboard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2055,8 +2055,8 @@ RectTransform:
   - {fileID: 455004955}
   - {fileID: 197006397}
   - {fileID: 50175053}
-  - {fileID: 1439002687}
   - {fileID: 586818544}
+  - {fileID: 1439002687}
   - {fileID: 76898865}
   m_Father: {fileID: 549380232}
   m_RootOrder: 0
