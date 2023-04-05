@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 16345933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 907484148}
@@ -319,8 +319,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Luana Adelino
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
-  m_sharedMaterial: {fileID: -903213594289924814, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
+  m_sharedMaterial: {fileID: 7054906154742885866, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -344,8 +344,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -421,7 +421,7 @@ RectTransform:
   m_GameObject: {fileID: 192543596}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1803536050}
@@ -722,7 +722,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 74.8
+  m_Spacing: 53.5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -790,11 +790,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Haykal
 
-
     Norton Serrano'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
-  m_sharedMaterial: {fileID: -903213594289924814, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
+  m_sharedMaterial: {fileID: 7054906154742885866, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -818,8 +817,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1030,7 +1029,7 @@ RectTransform:
   m_GameObject: {fileID: 574802838}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1978216579}
@@ -1300,7 +1299,7 @@ RectTransform:
   m_GameObject: {fileID: 744932606}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 504615789}
@@ -1467,10 +1466,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Arthur Ozorio\n\nMaria Eduarda da Fonseca\r"
+  m_text: "Arthur Ozorio\nMaria Eduarda da Fonseca\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
-  m_sharedMaterial: {fileID: -903213594289924814, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
+  m_sharedMaterial: {fileID: 7054906154742885866, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1494,8 +1493,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1604,8 +1603,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Luiza Arantes\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
-  m_sharedMaterial: {fileID: -903213594289924814, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
+  m_sharedMaterial: {fileID: 7054906154742885866, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1629,8 +1628,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1736,7 +1735,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 103.5
+  m_Spacing: 82.6
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -2268,7 +2267,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 105.5
+  m_Spacing: 83.5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -2404,18 +2403,19 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Clarissa Turela
 
-
-    Maria Carolina Esteves
-
+    Giovanna Bilotta
 
     Gustavo Camerano
 
+    Luana
+    Adelino
 
-    Giovanna
-    Bilotta'
+    Luiza Arantes
+
+    Maria Carolina Esteves'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
-  m_sharedMaterial: {fileID: -903213594289924814, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
+  m_sharedMaterial: {fileID: 7054906154742885866, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2439,8 +2439,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2664,14 +2664,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Davi Feitosa
 
-
     Luiza Leite
-
 
     Victhor Kronemberger'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
-  m_sharedMaterial: {fileID: -903213594289924814, guid: 7e12709033bd953428eb0be799fa664f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
+  m_sharedMaterial: {fileID: 7054906154742885866, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2695,8 +2693,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22
-  m_fontSizeBase: 22
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
