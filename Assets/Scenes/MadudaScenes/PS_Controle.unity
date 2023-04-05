@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 0.41960785, a: 1}
-    m_PressedColor: {r: 0.25882354, g: 0, b: 0.4117647, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -266,7 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 76898865}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Controle+comandos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 12}
-  m_SizeDelta: {x: 698.21106, y: 392.7437}
+  m_AnchoredPosition: {x: 0, y: 15.8671}
+  m_SizeDelta: {x: 470, y: 223.7258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &197006396
 GameObject:
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 33
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 519411037}
   - component: {fileID: 519411039}
   - component: {fileID: 519411038}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: "Movimenta\xE7\xE3o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,8 +676,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -181.2, y: 25.800003}
-  m_SizeDelta: {x: 248.8947, y: 54.889496}
+  m_AnchoredPosition: {x: -157.67363, y: 25.800003}
+  m_SizeDelta: {x: 94.4652, y: 54.8895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519411038
 MonoBehaviour:
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 101.23577, y: 8.651562, z: 48.95951, w: 26.94976}
+  m_margin: {x: -0.24735643, y: 8.651562, z: 0.70027924, w: 26.94976}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1108,7 +1108,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 621436740}
-  - component: {fileID: 621436743}
   - component: {fileID: 621436742}
   - component: {fileID: 621436741}
   m_Layer: 0
@@ -1152,9 +1151,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1176,58 +1175,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621436739}
   m_CullTransparentMesh: 1
---- !u!212 &621436743
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621436739}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a6eb8358c73d9fb4ea6f530da59f197c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 8.64, y: 4.86}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &680407659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1186,7 @@ GameObject:
   - component: {fileID: 680407660}
   - component: {fileID: 680407662}
   - component: {fileID: 680407661}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Dodge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1263,8 +1210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165.5, y: 16.699993}
-  m_SizeDelta: {x: 248.8947, y: 54.889496}
+  m_AnchoredPosition: {x: 148.60931, y: 16.699993}
+  m_SizeDelta: {x: 98.0847, y: 54.8895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680407661
 MonoBehaviour:
@@ -1320,7 +1267,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1349,7 +1296,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 124.69307, y: 12.96235, z: 83.91981, w: 22.073181}
+  m_margin: {x: 0.4256215, y: 12.96235, z: 0.069442734, w: 22.073181}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1372,7 +1319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 706974493}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Texto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1401,8 +1348,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.800003, y: -13.599989}
-  m_SizeDelta: {x: 611.2947, y: 174.28949}
+  m_AnchoredPosition: {x: -0.00049591, y: -13.599989}
+  m_SizeDelta: {x: 436.24, y: 174.2895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &724532919
 GameObject:
@@ -1567,7 +1514,7 @@ GameObject:
   - component: {fileID: 1347084676}
   - component: {fileID: 1347084678}
   - component: {fileID: 1347084677}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Ataque Especial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1835,7 +1782,7 @@ GameObject:
   - component: {fileID: 1588684146}
   - component: {fileID: 1588684148}
   - component: {fileID: 1588684147}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Pulo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1859,8 +1806,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180.3, y: -18.199991}
-  m_SizeDelta: {x: 248.8947, y: 54.889496}
+  m_AnchoredPosition: {x: 126.75, y: -18.199991}
+  m_SizeDelta: {x: 141.8, y: 54.8895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588684147
 MonoBehaviour:
@@ -1916,7 +1863,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1945,7 +1892,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 120.56669, y: 15.323901, z: 98.85158, w: 21.257751}
+  m_margin: {x: -0.08135222, y: 15.323901, z: -0.07979583, w: 21.257751}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2105,7 +2052,7 @@ GameObject:
   - component: {fileID: 1828689468}
   - component: {fileID: 1828689470}
   - component: {fileID: 1828689469}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: "Ataque Padr\xE3o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
