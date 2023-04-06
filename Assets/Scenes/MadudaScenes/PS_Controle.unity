@@ -762,7 +762,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.24735643, y: 8.651562, z: 0.70027924, w: 26.94976}
+  m_margin: {x: -0.24735643, y: 8.651562, z: 5.1078835, w: 26.94976}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dodge
+  m_text: Esquiva
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5b4d37661ad37124d8b83a77bd3d0c9b, type: 2}
   m_sharedMaterial: {fileID: 8427901299658784086, guid: 5b4d37661ad37124d8b83a77bd3d0c9b, type: 2}
@@ -1624,7 +1624,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 55.479034, y: 14.16024, z: 99.66699, w: 21.257751}
+  m_margin: {x: 47.599983, y: 14.16024, z: 106.8609, w: 21.257751}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
