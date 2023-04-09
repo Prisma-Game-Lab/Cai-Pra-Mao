@@ -9,14 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private PlayerMovement playerMovement;
 
-    void Awake()
-    {
-        playerInput = GetComponent<PlayerInput>();
-        var playerMovements = FindObjectsOfType<PlayerMovement>();
-        var index = playerInput.playerIndex;
-        playerMovement = playerMovements.FirstOrDefault(m => m.GetPlayerIndex() == index);
-    }
-
     // Update is called once per frame
     void Update()
     {
