@@ -17,17 +17,7 @@ public class PlayerCombat : MonoBehaviour
     void Awake()
     {
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         currentLives = maxLives;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 
@@ -42,7 +32,7 @@ public class PlayerCombat : MonoBehaviour
                 int damage = Random.Range(character.n_minDamage, character.n_maxDamage + 1);
                 PlayerCombat enemyPlayerCombat = enemy.GetComponent<PlayerCombat>();
                 enemyPlayerCombat.currentDamage += damage;
-                enemyPlayerCombat.Knockback(character.n_knockbackDistance);
+                enemyPlayerCombat.Knockback(character.n_knockbackDistance, this.gameObject.GetComponent<Rigidbody2D>());
             }
         }
     }
@@ -59,10 +49,14 @@ public class PlayerCombat : MonoBehaviour
         return;
     }
 
-    public void Knockback(int distance)
+    public void Knockback(int distance, Rigidbody2D enemy_rb)
     {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         float knockback = ((currentDamage / 10) + ((currentDamage * distance) / 20));
-        Debug.Log(knockback);
+        Vector2 diff = transform.position - enemy_rb.transform.position;
+        diff = diff.normalized * knockback;
+        diff.y = 7.5f;
+        rb.AddForce(diff, ForceMode2D.Impulse);
     }
 
     public void Die()
