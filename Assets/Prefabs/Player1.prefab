@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 8013282262460771114}
   - component: {fileID: 6189941103264535456}
   - component: {fileID: 6666202766253018628}
-  m_Layer: 0
+  - component: {fileID: 4640552340007906124}
+  m_Layer: 6
   m_Name: Player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,6 +37,7 @@ Transform:
   m_Children:
   - {fileID: 6189941103749721223}
   - {fileID: 6189941103571460675}
+  - {fileID: 1552002862061711718}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -211,6 +213,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ddf6e577-be6d-404d-82bb-88d65d75b352
     m_ActionName: Actions/Dodge[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6666202766253018628}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnNormalAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1749aff7-b1c9-4d4c-b744-414fae15d2d9
+    m_ActionName: Actions/NormalAttack[/Keyboard/z,/Keyboard/j]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6666202766253018628}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnSpecialAttack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4e515d9e-76c1-448b-ab01-474cba405d23
+    m_ActionName: Actions/SpecialAttack[/Keyboard/x,/Keyboard/k]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Player1
   m_DefaultActionMap: Actions
@@ -255,6 +289,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 8013282262460771114}
   playerMovement: {fileID: 6189941103264535456}
+  playerCombat: {fileID: 4640552340007906124}
+--- !u!114 &4640552340007906124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6189941103264535471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51f434b247db1e14e9ee0d4354d5dd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLives: 3
+  currentLives: 0
+  normalAttackRange: 1
+  attackPoint: {fileID: 1552002862061711718}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  character: {fileID: 0}
+  currentDamage: 0
+  playerIndex: 0
 --- !u!1 &6189941103571460674
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,3 +427,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7203211994324320789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552002862061711718}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1552002862061711718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7203211994324320789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6189941103264535460}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

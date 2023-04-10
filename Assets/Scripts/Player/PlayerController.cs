@@ -8,12 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private PlayerInput playerInput;
     [SerializeField] private PlayerMovement playerMovement;
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    [SerializeField] private PlayerCombat playerCombat;
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
@@ -35,5 +30,26 @@ public class PlayerController : MonoBehaviour
     {
         if (ctx.performed)
             StartCoroutine(playerMovement.Dash());
+    }
+
+    public void OnNormalAttack(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+            playerCombat.NormalAttack();
+    }
+
+    public void OnSpecialAttack(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            if (playerCombat.character.name == "Toni")
+            {
+                playerCombat.ToniSpecialAttack();
+            }
+            else if (playerCombat.character.name == "Vector")
+            {
+                playerCombat.VectorSpecialAttack();
+            }
+        }
     }
 }

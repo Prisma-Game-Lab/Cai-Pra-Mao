@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a29a078f3a2a644a955efdcb833b2a4, type: 3}
+  m_Name: Toni
+  m_EditorClassIdentifier: 
+  name: Toni
+  n_minDamage: 8
+  n_maxDamage: 12
+  n_knockbackDistance: 15
+  n_antecipation: 0.2
+  n_freeze: 0.2
+  n_recover: 0.1
+  s_minDamage: 16
+  s_maxDamage: 24
+  s_knockbackDistance: 30
+  s_antecipation: 0.3
+  s_freeze: 0.3
+  s_recover: 0.2

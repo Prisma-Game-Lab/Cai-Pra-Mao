@@ -7,17 +7,39 @@ public class BattleSceneManager : MonoBehaviour
 {
     [SerializeField] private GameObject p1Prefab;
     [SerializeField] private GameObject p2Prefab;
+    public CharStats p1Char;
+    public CharStats p2Char;
+
 
     // Start is called before the first frame update
     void Start()
     {
         var p1 = PlayerInput.Instantiate(p1Prefab, controlScheme: "Player1", pairWithDevice: Keyboard.current);
         var p2 = PlayerInput.Instantiate(p2Prefab, controlScheme: "Player2", pairWithDevice: Keyboard.current);
+        p1.GetComponent<PlayerCombat>().character = p1Char;
+        p2.GetComponent<PlayerCombat>().character = p2Char;
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void EndBattle(int winnerIndex)
+    {
+        Debug.Log(winnerIndex + " venceu!");
+    }
+
+    public void RespawnPlayer(GameObject player, int playerIndex)
+    {
+        if (playerIndex == 1)
+        {
+            player.transform.position = p1Prefab.transform.position;
+        }
+        else if (playerIndex == 2)
+        {
+            player.transform.position = p2Prefab.transform.position;
+        }
     }
 }

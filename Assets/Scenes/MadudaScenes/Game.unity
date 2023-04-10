@@ -548,6 +548,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1Prefab: {fileID: 6189941103264535471, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
   p2Prefab: {fileID: 5754690874654250956, guid: 7f381b4ff49ed8c409b79754d179d7e0, type: 3}
+  p1Char: {fileID: 11400000, guid: b4c9128d110de614e90f2c37a8fc72bb, type: 2}
+  p2Char: {fileID: 11400000, guid: ff01c57ec16ffd2498640e3b7e42546d, type: 2}
 --- !u!4 &1683907953
 Transform:
   m_ObjectHideFlags: 0
