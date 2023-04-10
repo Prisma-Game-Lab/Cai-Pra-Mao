@@ -311,7 +311,7 @@ MonoBehaviour:
     m_Bits: 64
   character: {fileID: 0}
   currentDamage: 0
-  playerIndex: 0
+  playerIndex: 1
 --- !u!1 &6189941103571460674
 GameObject:
   m_ObjectHideFlags: 0
