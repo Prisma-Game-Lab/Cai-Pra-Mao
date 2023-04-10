@@ -65,13 +65,13 @@ public class PlayerCombat : MonoBehaviour
 
         if (currentLives <= 0)
         {
-            if (playerIndex == 1)
+            if (character.name == "Toni")
             {
-                battleSceneManager.EndBattle(2);
+                battleSceneManager.EndBattle("Vector");
             }
-            else if (playerIndex == 2)
+            else if (character.name == "Vector")
             {
-                battleSceneManager.EndBattle(1);
+                battleSceneManager.EndBattle("Toni");
             }
             return;
         }

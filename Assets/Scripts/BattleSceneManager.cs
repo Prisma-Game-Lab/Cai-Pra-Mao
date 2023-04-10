@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class BattleSceneManager : MonoBehaviour
 {
@@ -26,9 +27,16 @@ public class BattleSceneManager : MonoBehaviour
 
     }
 
-    public void EndBattle(int winnerIndex)
+    public void EndBattle(string winnerName)
     {
-        Debug.Log(winnerIndex + " venceu!");
+        if (winnerName == "Toni")
+        {
+            SceneManager.LoadScene("Vitoria_Galinho");
+        }
+        else if (winnerName == "Vector")
+        {
+            SceneManager.LoadScene("Vitoria_Lontra");
+        }
     }
 
     public void RespawnPlayer(GameObject player, int playerIndex)

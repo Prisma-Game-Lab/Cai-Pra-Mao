@@ -47,4 +47,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cenario.unity
     guid: 62ea73fd46870764780e830cfe2444a0
+  - enabled: 1
+    path: Assets/Scenes/MadudaScenes/Vitoria_Lontra.unity
+    guid: cf73f7f7b2d72d14abc6895b12a0bd77
+  - enabled: 1
+    path: Assets/Scenes/MadudaScenes/Vitoria_Galinho.unity
+    guid: afcda08391780c848af7aff1e9da8a27
   m_configObjects: {}
