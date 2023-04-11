@@ -28,7 +28,7 @@ public class MenuController : MonoBehaviour
     }
     public void StartFight()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 7);
+        SceneManager.LoadScene("Game");
     }
 
     public void GoControllerKeyboard()
