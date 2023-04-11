@@ -77,5 +77,6 @@ public class PlayerCombat : MonoBehaviour
         }
 
         battleSceneManager.RespawnPlayer(this.gameObject, playerIndex);
+        currentDamage = 0;
     }
 }
