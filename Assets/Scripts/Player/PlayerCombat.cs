@@ -18,7 +18,6 @@ public class PlayerCombat : MonoBehaviour
     {
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
         currentLives = maxLives;
-
     }
 
     public void NormalAttack()
@@ -32,6 +31,7 @@ public class PlayerCombat : MonoBehaviour
                 int damage = Random.Range(character.n_minDamage, character.n_maxDamage + 1);
                 PlayerCombat enemyPlayerCombat = enemy.GetComponent<PlayerCombat>();
                 enemyPlayerCombat.currentDamage += damage;
+                battleSceneManager.uiManager.SetDamage(enemyPlayerCombat.playerIndex, enemyPlayerCombat.currentDamage.ToString());
                 enemyPlayerCombat.Knockback(character.n_knockbackDistance, this.gameObject.GetComponent<Rigidbody2D>());
             }
         }
@@ -76,7 +76,9 @@ public class PlayerCombat : MonoBehaviour
             return;
         }
 
-        battleSceneManager.RespawnPlayer(this.gameObject, playerIndex);
         currentDamage = 0;
+        battleSceneManager.uiManager.SetLives(playerIndex, currentLives);
+        battleSceneManager.uiManager.SetDamage(playerIndex, currentDamage.ToString());
+        battleSceneManager.RespawnPlayer(this.gameObject, playerIndex);
     }
 }
