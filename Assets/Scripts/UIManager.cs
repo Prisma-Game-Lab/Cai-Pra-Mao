@@ -17,13 +17,22 @@ public class UIManager : MonoBehaviour
     public GameObject p2Sprite;
     public GameObject p2Lives;
 
+    public GameObject timer;
 
+    private float elapsedTime;
 
     // Start is called before the first frame update
     void Start()
     {
         SetDamage(1, "0");
         SetDamage(2, "0");
+        elapsedTime = 0;
+    }
+
+    void Update()
+    {
+        elapsedTime += Time.deltaTime;
+        UpdateTimer(elapsedTime);
     }
 
     public void SetSprites(int playerIndex, Sprite sprite)
@@ -76,5 +85,26 @@ public class UIManager : MonoBehaviour
         {
             p2Lives.GetComponent<TMP_Text>().text = _text;
         }
+    }
+
+    public void UpdateTimer(float currentTime)
+    {
+        currentTime += 1;
+
+        float hours = Mathf.FloorToInt(currentTime / 60);
+        float minutes = Mathf.FloorToInt(currentTime % 60);
+
+        string minutesText;
+
+        if (minutes < 10)
+        {
+            minutesText = "0" + minutes.ToString();
+        }
+        else
+        {
+            minutesText = minutes.ToString();
+        }
+
+        timer.GetComponent<TMP_Text>().text = hours.ToString() + ":" + minutesText;
     }
 }
