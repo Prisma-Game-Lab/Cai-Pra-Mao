@@ -1115,6 +1115,15 @@ MonoBehaviour:
     loop: 0
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
+  - name: Isolado
+    clip: {fileID: 8300000, guid: faf2cad732cdae04cb08af64bf3b5d05, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
 --- !u!4 &858545749
 Transform:
   m_ObjectHideFlags: 0
