@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SelectScreenManager : MonoBehaviour
 {
-    public int numberOfPlayers = 1;
+   /* public int numberOfPlayers = 1;
     public List<PlayerInterfaces> plInterfaces = new List<PlayerInterfaces>();
     public PotraitInfo[] potraitPrefabs;
     public int maxX;
@@ -179,5 +179,5 @@ public class SelectScreenManager : MonoBehaviour
             pl.selector.transform.localPosition = selectorPosition;
         }
         
-
+*/
 }
