@@ -10,6 +10,7 @@ public class BattleSceneManager : MonoBehaviour
     [SerializeField] private GameObject p2Prefab;
     public CharStats p1Char;
     public CharStats p2Char;
+    public UIManager uiManager;
 
 
     // Start is called before the first frame update
