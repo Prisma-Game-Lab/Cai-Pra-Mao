@@ -85,6 +85,16 @@ public class PlayerCombat : MonoBehaviour
         Vector2 diff = transform.position - enemy_rb.transform.position;
         diff = diff.normalized * knockback;
         diff.y = 7.5f;
+
+        if (character.name == "Toni")
+         {
+            AudioManager.instance.Play("Damage_Galinho");
+        }
+        else if (character.name == "Vector")
+        {
+            AudioManager.instance.Play("Damage_Lontra");
+        }
+
         rb.AddForce(diff, ForceMode2D.Impulse);
     }
 
