@@ -14,6 +14,9 @@ public class SceneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.instance.StopAllSounds();
+        AudioManager.instance.Play("Music_Menu");
+
         isPaused = false;
         if (pauseMenu)
             pauseMenu.SetActive(false);

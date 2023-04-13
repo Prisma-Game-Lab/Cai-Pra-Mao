@@ -1043,6 +1043,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mixerGroup: {fileID: 0}
   sounds:
+  - name: Music_Menu
+    clip: {fileID: 8300000, guid: 0704cdce2117ad54082b4b662581b460, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
   - name: Button
     clip: {fileID: 8300000, guid: 07549f48adb6894469ae6c2e38592dc1, type: 3}
     volume: 1
