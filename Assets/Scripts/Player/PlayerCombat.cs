@@ -48,7 +48,7 @@ public class PlayerCombat : MonoBehaviour
             }
             else if (character.name == "Vector")
             {
-
+                AudioManager.instance.Play("Attack_Lontra");
             }
 
             StartCoroutine(AttackCooldown());
