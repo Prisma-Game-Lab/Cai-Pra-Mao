@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashSpeed;
     private bool isDashing;
 
+    [SerializeField] private Animator animator;
+
     void Awake()
     {
         isGrounded = true;
@@ -59,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         {
             targetVelocity = new Vector2(playerSpeed * normalizeHorizontalSpeed, rb.velocity.y);
             rb.velocity = Vector2.Lerp(rb.velocity, targetVelocity, Time.deltaTime * accel);
+            animator.SetFloat("Speed", Mathf.Abs(targetVelocity.x));
         }
 
     }
@@ -107,15 +110,18 @@ public class PlayerMovement : MonoBehaviour
                 AudioManager.instance.Play("Pulo_Lontra");
             }
         }
-        
+
         if (isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpAmount);
+            animator.SetBool("Pulando", true);
         }
         else if (!doubleJumped)
         {
+            animator.SetBool("Pulando", false);
             doubleJumped = true;
             rb.velocity = new Vector2(rb.velocity.x, doubleJumpAmount);
+            animator.SetBool("Pulando", true);
         }
     }
 
@@ -127,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             doubleJumped = false;
+            animator.SetBool("Pulando", false);
         }
     }
 
@@ -146,9 +153,21 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
 
         AudioManager.instance.Play("Dodge");
+        StartCoroutine(Roll());
+
 
         yield return new WaitForSeconds(dashTime);
 
+
         isDashing = false;
+    }
+
+    private IEnumerator Roll()
+    {
+        animator.SetBool("Rolando", true);
+
+        yield return new WaitForSeconds(.3f);
+
+        animator.SetBool("Rolando", false);
     }
 }
