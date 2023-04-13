@@ -63,7 +63,7 @@ public class MenuController : MonoBehaviour
 
     public void GoPStoKeyboard()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + -1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
     public void GoPStoXbox()
@@ -79,5 +79,10 @@ public class MenuController : MonoBehaviour
     public void GoXboxtoKeyboard()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+    }
+
+    public void ButtonSound()
+    {
+        AudioManager.instance.Play("Button");
     }
 }

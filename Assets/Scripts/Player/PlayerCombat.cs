@@ -35,6 +35,15 @@ public class PlayerCombat : MonoBehaviour
                 enemyPlayerCombat.Knockback(character.n_knockbackDistance, this.gameObject.GetComponent<Rigidbody2D>());
             }
         }
+
+        if (character.name == "Toni")
+        {
+            AudioManager.instance.Play("Attack_Galinho");
+        }
+        else if (character.name == "Vector")
+        {
+            
+        }
     }
 
     public void ToniSpecialAttack()

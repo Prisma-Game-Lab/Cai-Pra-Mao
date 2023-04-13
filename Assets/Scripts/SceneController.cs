@@ -54,4 +54,10 @@ public class SceneController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ButtonSound()
+    {
+        AudioManager.instance.Play("Button");
+    }
+
 }

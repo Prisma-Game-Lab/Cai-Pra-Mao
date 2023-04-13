@@ -94,6 +94,20 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
+        PlayerCombat combat = gameObject.GetComponent<PlayerCombat>();
+
+        if (isGrounded || !doubleJumped)
+        {
+            if (combat.character.name == "Toni")
+            {
+                //AudioManager.instance.Play("");
+            }
+            else if (combat.character.name == "Vector")
+            {
+                AudioManager.instance.Play("Pulo_Lontra");
+            }
+        }
+        
         if (isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpAmount);
@@ -130,6 +144,8 @@ public class PlayerMovement : MonoBehaviour
     public IEnumerator Dash()
     {
         isDashing = true;
+
+        AudioManager.instance.Play("Dodge");
 
         yield return new WaitForSeconds(dashTime);
 
