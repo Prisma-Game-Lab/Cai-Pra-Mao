@@ -61,13 +61,13 @@ public class CharacterManager : MonoBehaviour
         public GameObject prefab;
     }
 
-    [System.Serializable]
-    public class PlayerBase
-    {
-        public string playerId;
-        public string inputId;
-        public bool hasCharacter;
-        public GameObject playerPrefab;
-        public StateManager playerStates;
-    }
+}
+[System.Serializable]
+public class PlayerBase
+{
+    public string playerId;
+    public string inputId;
+    public bool hasCharacter;
+    public GameObject playerPrefab;
+    public StateManager playerStates;
 }
