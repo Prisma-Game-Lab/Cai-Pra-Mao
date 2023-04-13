@@ -555,6 +555,8 @@ MonoBehaviour:
   p2Sprite: {fileID: 1245120110980509237}
   p2Lives: {fileID: 2666927645624478128}
   timer: {fileID: 5926093146443673689}
+  galinho: {fileID: -433712559, guid: 21ac213c6b3f0804eaa2a1fb083ed45b, type: 3}
+  lontra: {fileID: 21300000, guid: 1ba8cfbd7a753674c8c75caa54e19e84, type: 3}
 --- !u!1 &2592333127003725473
 GameObject:
   m_ObjectHideFlags: 0

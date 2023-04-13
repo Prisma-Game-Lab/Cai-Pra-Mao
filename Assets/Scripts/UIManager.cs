@@ -19,6 +19,10 @@ public class UIManager : MonoBehaviour
 
     public GameObject timer;
 
+    public Sprite galinho;
+    public Sprite lontra;
+
+
     private float elapsedTime;
 
     // Start is called before the first frame update
@@ -27,6 +31,20 @@ public class UIManager : MonoBehaviour
         SetDamage(1, "0");
         SetDamage(2, "0");
         elapsedTime = 0;
+
+        var players = FindObjectsOfType<PlayerCombat>();
+
+        foreach (PlayerCombat combat in players)
+        {
+            if (combat.character.name == "Toni")
+            {
+                SetSprites(combat.playerIndex, galinho);
+            }
+            else if (combat.character.name == "Vector")
+            {
+                SetSprites(combat.playerIndex, lontra);
+            }
+        }
     }
 
     void Update()
@@ -35,15 +53,15 @@ public class UIManager : MonoBehaviour
         UpdateTimer(elapsedTime);
     }
 
-    public void SetSprites(int playerIndex, Sprite sprite)
+    public void SetSprites(int playerIndex, Sprite _sprite)
     {
         if (playerIndex == 1)
         {
-            p1Sprite.GetComponent<Image>().sprite = sprite;
+            p1Sprite.GetComponent<Image>().sprite = _sprite;
         }
         else if (playerIndex == 2)
         {
-            p2Sprite.GetComponent<Image>().sprite = sprite;
+            p2Sprite.GetComponent<Image>().sprite = _sprite;
         }
     }
 
