@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6189941103264535471}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.19, y: -2.78, z: 0}
+  m_LocalPosition: {x: -3, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -127,7 +127,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017626286, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -138,7 +138,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7532315, y: 1}
+  m_Size: {x: 0.75, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &7049848654495367994
 Animator:
@@ -285,17 +285,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 0
   MaxplayerSpeed: 10
-  playerSpeed: 6.6
-  accel: 10
+  playerSpeed: 5.5
+  accel: 11
   groundChecker: {fileID: 6189941103571460675}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpAmount: 10
-  doubleJumpAmount: 10
+  jumpAmount: 9
+  doubleJumpAmount: 9
   isFacingRight: 1
   dashTime: 0.1
-  dashSpeed: 30
+  dashSpeed: 20
   animator: {fileID: 7049848654495367994}
 --- !u!114 &6666202766253018628
 MonoBehaviour:
