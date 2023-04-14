@@ -885,7 +885,6 @@ GameObject:
   - component: {fileID: 7418849254650359882}
   - component: {fileID: 7418849254650359883}
   - component: {fileID: 7418849254650359860}
-  - component: {fileID: 2240731845740536597}
   m_Layer: 5
   m_Name: Menu_UI_Personagem
   m_TagString: Untagged
@@ -980,28 +979,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2240731845740536597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7418849254650359861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f105a4aed0874f74cb540e20cd4e4a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  readyButton: {fileID: 1195327480626000354}
-  selectors:
-  - {fileID: 4692615500184541494}
-  - {fileID: 1792164227248211932}
-  portraits:
-  - {fileID: 7418849255837171622}
-  - {fileID: 4554690800271712588}
-  characters:
-  - {fileID: 11400000, guid: ff01c57ec16ffd2498640e3b7e42546d, type: 2}
-  - {fileID: 11400000, guid: b4c9128d110de614e90f2c37a8fc72bb, type: 2}
 --- !u!1 &7418849254747804920
 GameObject:
   m_ObjectHideFlags: 0
@@ -2420,11 +2397,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6467326507688914921, guid: 4d30e65bd403a4640a8494d31e229af9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d30e65bd403a4640a8494d31e229af9, type: 3}
---- !u!1 &4692615500184541494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9091087360806242682, guid: 4d30e65bd403a4640a8494d31e229af9, type: 3}
-  m_PrefabInstance: {fileID: 4554690801298018380}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7418849255837171622 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6467326507688914922, guid: 4d30e65bd403a4640a8494d31e229af9, type: 3}
@@ -2592,11 +2564,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6467326507688914921, guid: 4d30e65bd403a4640a8494d31e229af9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d30e65bd403a4640a8494d31e229af9, type: 3}
---- !u!1 &1792164227248211932 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9091087360806242682, guid: 4d30e65bd403a4640a8494d31e229af9, type: 3}
-  m_PrefabInstance: {fileID: 7418849254802493094}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4554690800271712588 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6467326507688914922, guid: 4d30e65bd403a4640a8494d31e229af9, type: 3}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class CharSelection : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class CharSelection : MonoBehaviour
     public GameObject[] selectors;
     public Transform[] portraits;
     public CharStats[] characters;
+    public Sprite[] charSprites;
+    public Image[] bigImage;
+    public TMP_Text[] charNames;
     private bool[] playerReady;
 
     // Start is called before the first frame update
@@ -33,10 +37,14 @@ public class CharSelection : MonoBehaviour
             if (selectors[0].gameObject.transform.position == portraits[0].position)
             {
                 selectors[0].gameObject.transform.position = portraits[1].position;
+                bigImage[0].sprite = charSprites[1];
+                charNames[0].text = "Toni Galinho";
             }
             else
             {
                 selectors[0].gameObject.transform.position = portraits[0].position;
+                bigImage[0].sprite = charSprites[0];
+                charNames[0].text = "Vector";
             }
         }
     }
@@ -48,10 +56,14 @@ public class CharSelection : MonoBehaviour
             if (selectors[1].gameObject.transform.position == portraits[0].position)
             {
                 selectors[1].gameObject.transform.position = portraits[1].position;
+                bigImage[1].sprite = charSprites[1];
+                charNames[1].text = "Toni Galinho";
             }
             else
             {
                 selectors[1].gameObject.transform.position = portraits[0].position;
+                bigImage[1].sprite = charSprites[0];
+                charNames[1].text = "Vector";
             }
         }
     }
