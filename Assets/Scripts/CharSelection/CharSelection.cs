@@ -63,7 +63,7 @@ public class CharSelection : MonoBehaviour
             {
                 selectors[1].gameObject.transform.position = portraits[0].position;
                 bigImage[1].sprite = charSprites[0];
-                charNames[1].text = "Vector";
+                charNames[1].text = "Vector, a Lontra";
             }
         }
     }
