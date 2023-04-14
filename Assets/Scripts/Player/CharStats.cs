@@ -22,4 +22,7 @@ public class CharStats : ScriptableObject
     public float s_antecipation;
     public float s_freeze;
     public float s_recover;
+
+    [Header("Animator")]
+    public RuntimeAnimatorController animatorController;
 }

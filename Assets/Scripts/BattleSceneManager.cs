@@ -18,11 +18,15 @@ public class BattleSceneManager : MonoBehaviour
     {
         // AudioManager.instance.StopAllSounds();
         // AudioManager.instance.Play("Music_Menu");
+        p1Char = SelectedCharacters.instance.p1Character;
+        p2Char = SelectedCharacters.instance.p2Character;
 
         var p1 = PlayerInput.Instantiate(p1Prefab, controlScheme: "Player1", pairWithDevice: Keyboard.current);
         var p2 = PlayerInput.Instantiate(p2Prefab, controlScheme: "Player2", pairWithDevice: Keyboard.current);
         p1.GetComponent<PlayerCombat>().character = p1Char;
+        p1.GetComponent<Animator>().runtimeAnimatorController = p1Char.animatorController;
         p2.GetComponent<PlayerCombat>().character = p2Char;
+        p2.GetComponent<Animator>().runtimeAnimatorController = p2Char.animatorController;
     }
 
     // Update is called once per frame
