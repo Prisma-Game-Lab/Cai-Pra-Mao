@@ -704,12 +704,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6189941103264535457, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189941103264535457, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.24
+      value: 0.92444444
       objectReference: {fileID: 0}
     - target: {fileID: 6189941103264535457, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.27
+      value: 0.92444444
       objectReference: {fileID: 0}
     - target: {fileID: 6189941103264535459, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_Sprite
@@ -729,6 +733,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6189941103264535459, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189941103264535459, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6189941103264535460, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
@@ -778,6 +786,14 @@ PrefabInstance:
     - target: {fileID: 6189941103264535471, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189941103264535471, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8013282262460771114, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
