@@ -25,3 +25,4 @@ MonoBehaviour:
   s_antecipation: 0.45
   s_freeze: 0.3
   s_recover: 0.2
+  animatorController: {fileID: 9100000, guid: b9a340ad2542d1846bfe5455e4a8ce49, type: 2}
