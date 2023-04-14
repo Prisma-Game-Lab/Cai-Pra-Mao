@@ -383,6 +383,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7418849254456357856, guid: c3f92a7009a7d9048a6f2e9766f8bd4d, type: 3}
+      propertyPath: m_text
+      value: Vector, a lontra
+      objectReference: {fileID: 0}
     - target: {fileID: 7418849254650359861, guid: c3f92a7009a7d9048a6f2e9766f8bd4d, type: 3}
       propertyPath: m_Name
       value: Menu_UI_Personagem
@@ -470,6 +474,18 @@ PrefabInstance:
     - target: {fileID: 7418849254650359881, guid: c3f92a7009a7d9048a6f2e9766f8bd4d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418849254650359883, guid: c3f92a7009a7d9048a6f2e9766f8bd4d, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418849254650359883, guid: c3f92a7009a7d9048a6f2e9766f8bd4d, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418849254650359883, guid: c3f92a7009a7d9048a6f2e9766f8bd4d, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 7418849255485659521, guid: c3f92a7009a7d9048a6f2e9766f8bd4d, type: 3}
       propertyPath: m_SizeDelta.x
