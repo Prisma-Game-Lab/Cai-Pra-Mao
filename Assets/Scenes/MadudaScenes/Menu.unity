@@ -632,12 +632,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfce0abe81b53b4faa78dced7c7065a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfUsers: 2
-  characterList:
-  - charId: 
-    prefab: {fileID: 0}
-  - charId: 
-    prefab: {fileID: 0}
 --- !u!4 &521567757
 Transform:
   m_ObjectHideFlags: 0
@@ -1116,7 +1110,7 @@ MonoBehaviour:
     mixerGroup: {fileID: 0}
     source: {fileID: 0}
   - name: Isolado
-    clip: {fileID: 8300000, guid: faf2cad732cdae04cb08af64bf3b5d05, type: 3}
+    clip: {fileID: 8300000, guid: 03b98035dc88f414a92abc9723087e4b, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 0
