@@ -264,7 +264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 34402a2eb3138af408931dcfcdd4256e, type: 3}
+  m_Sprite: {fileID: -433712559, guid: 21ac213c6b3f0804eaa2a1fb083ed45b, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -897,7 +897,7 @@ MonoBehaviour:
 
     Esquivas:
 
-    Defesas:'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
   m_sharedMaterial: {fileID: 7054906154742885866, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
@@ -1144,8 +1144,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 67, y: 35}
-  m_SizeDelta: {x: 0.85333335, y: 0.96}
+  m_AnchoredPosition: {x: 61, y: 27}
+  m_SizeDelta: {x: 0.6067, y: 0.68261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1273467610
 MonoBehaviour:
@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f332e3f73a0342940953df7aeb29a486, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 34402a2eb3138af408931dcfcdd4256e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1353,7 +1353,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1499,7 +1499,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1566,6 +1566,7 @@ GameObject:
   - component: {fileID: 1875988929}
   - component: {fileID: 1875988928}
   - component: {fileID: 1875988927}
+  - component: {fileID: 1875988931}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1661,6 +1662,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1875988931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875988926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2cd31ee4f0b6b469eea5c2ac758389, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toni: {fileID: -433712559, guid: 21ac213c6b3f0804eaa2a1fb083ed45b, type: 3}
+  vector: {fileID: 21300000, guid: 34402a2eb3138af408931dcfcdd4256e, type: 3}
+  winnerName: {fileID: 1267468301}
+  stats: {fileID: 1244315561}
+  winnerImage: {fileID: 1273467610}
+  loserImage: {fileID: 489601035}
 --- !u!1 &1929571778
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,7 +2263,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 12
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

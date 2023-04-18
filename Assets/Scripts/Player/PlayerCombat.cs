@@ -53,6 +53,15 @@ public class PlayerCombat : MonoBehaviour
                 AudioManager.instance.Play("Attack_Lontra");
             }
 
+            if (playerIndex == 1)
+            {
+                SelectedCharacters.instance.p1Attacks++;
+            }
+            else
+            {
+                SelectedCharacters.instance.p2Attacks++;
+            }
+
             StartCoroutine(AttackCooldown(1));
         }
     }
@@ -144,14 +153,15 @@ public class PlayerCombat : MonoBehaviour
 
         if (currentLives <= 0)
         {
-            if (character.name == "Toni")
+            if (playerIndex == 1)
             {
-                battleSceneManager.EndBattle("Vector");
+                SelectedCharacters.instance.SetWinner(2);
             }
-            else if (character.name == "Vector")
+            else if (playerIndex == 2)
             {
-                battleSceneManager.EndBattle("Toni");
+                SelectedCharacters.instance.SetWinner(1);
             }
+            battleSceneManager.EndBattle();
             return;
         }
 

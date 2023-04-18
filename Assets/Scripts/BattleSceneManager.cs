@@ -35,16 +35,9 @@ public class BattleSceneManager : MonoBehaviour
 
     }
 
-    public void EndBattle(string winnerName)
+    public void EndBattle()
     {
-        if (winnerName == "Toni")
-        {
-            SceneManager.LoadScene("Vitoria_Galinho");
-        }
-        else if (winnerName == "Vector")
-        {
-            SceneManager.LoadScene("Vitoria_Lontra");
-        }
+        SceneManager.LoadScene("Vitoria_Galinho");
     }
 
     public void RespawnPlayer(GameObject player, int playerIndex)

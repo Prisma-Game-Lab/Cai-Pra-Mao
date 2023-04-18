@@ -124,5 +124,6 @@ public class UIManager : MonoBehaviour
         }
 
         timer.GetComponent<TMP_Text>().text = hours.ToString() + ":" + minutesText;
+        SelectedCharacters.instance.matchTime = timer.GetComponent<TMP_Text>().text;
     }
 }

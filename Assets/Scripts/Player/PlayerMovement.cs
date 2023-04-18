@@ -152,6 +152,15 @@ public class PlayerMovement : MonoBehaviour
     {
         isDashing = true;
 
+        if (gameObject.GetComponent<PlayerCombat>().playerIndex == 1)
+        {
+            SelectedCharacters.instance.p1DashCount++;
+        }
+        else
+        {
+            SelectedCharacters.instance.p2DashCount++;
+        }
+
         AudioManager.instance.Play("Dodge");
         StartCoroutine(Roll());
 
