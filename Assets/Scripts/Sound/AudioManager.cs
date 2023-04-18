@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.loop = s.loop;
-            s.source.volume = s.volume;
+            s.source.volume = PlayerPrefs.GetFloat("VolumePref");
 
             s.source.outputAudioMixerGroup = mixerGroup;
         }
@@ -43,7 +43,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-       
+
         s.source.Play();
     }
 

@@ -18,12 +18,14 @@ public class PlayerCombat : MonoBehaviour
     public int playerIndex;
 
     private bool canAttack;
+    public bool canRecieveDamage;
 
     void Awake()
     {
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
         currentLives = maxLives;
         canAttack = true;
+        canRecieveDamage = true;
     }
 
     public void NormalAttack()
@@ -34,7 +36,7 @@ public class PlayerCombat : MonoBehaviour
 
             foreach (Collider2D enemy in hitEnemies)
             {
-                if (enemy.gameObject != this.gameObject)
+                if (enemy.gameObject != this.gameObject && enemy.gameObject.GetComponent<PlayerCombat>().canRecieveDamage)
                 {
                     int damage = Random.Range(character.n_minDamage, character.n_maxDamage + 1);
                     PlayerCombat enemyPlayerCombat = enemy.GetComponent<PlayerCombat>();

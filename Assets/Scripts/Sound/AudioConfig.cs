@@ -14,7 +14,7 @@ public class AudioConfig : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _am = GetComponent<AudioManager>();
+        _am = AudioManager.instance;
 
         firstPlayInt = PlayerPrefs.GetInt(firstPlay);
 
@@ -51,5 +51,6 @@ public class AudioConfig : MonoBehaviour
         {
             s.source.volume = volumeSlider.value;
         }
+        SaveSoundSettings();
     }
 }

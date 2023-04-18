@@ -1039,7 +1039,7 @@ MonoBehaviour:
   sounds:
   - name: Music_Game
     clip: {fileID: 8300000, guid: 04f752a1604c72d4b888d225a970fbd7, type: 3}
-    volume: 0.8
+    volume: 0.6
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -1048,7 +1048,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Music_Menu
     clip: {fileID: 8300000, guid: 1271f16873508a44d8aa072e879c9d0d, type: 3}
-    volume: 0.8
+    volume: 0.6
     volumeVariance: 0
     pitch: 0
     pitchVariance: 0
@@ -1066,6 +1066,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Attack_Galinho
     clip: {fileID: 8300000, guid: 097bc726cbc78024285e968dda0250ae, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: Pulo_Galinho
+    clip: {fileID: 8300000, guid: 3f7ff0080d9ae5547a42b0d4795817e7, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 0

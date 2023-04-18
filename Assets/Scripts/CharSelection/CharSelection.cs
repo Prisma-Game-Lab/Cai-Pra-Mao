@@ -85,12 +85,12 @@ public class CharSelection : MonoBehaviour
         if (player == 0)
         {
             SelectedCharacters.instance.p1Character = characters[selected];
-            selectors[player].GetComponent<Image>().color = Color.blue;
+            selectors[player].GetComponent<Image>().color = new Color(0f / 255f, 165f / 255f, 213f / 255f);
         }
         else if (player == 1)
         {
             SelectedCharacters.instance.p2Character = characters[selected];
-            selectors[player].GetComponent<Image>().color = Color.cyan;
+            selectors[player].GetComponent<Image>().color = new Color(141f / 255f, 30f / 255f, 255f / 255f);
         }
 
         if (CheckIfPlayersReady())
@@ -107,12 +107,12 @@ public class CharSelection : MonoBehaviour
         if (player == 0)
         {
             SelectedCharacters.instance.p1Character = null;
-            selectors[player].GetComponent<Image>().color = Color.red;
+            selectors[player].GetComponent<Image>().color = new Color(0f / 255f, 255f / 255f, 213f / 255f);
         }
         else if (player == 1)
         {
             SelectedCharacters.instance.p2Character = null;
-            selectors[player].GetComponent<Image>().color = Color.green;
+            selectors[player].GetComponent<Image>().color = new Color(242f / 255f, 119f / 255f, 225f / 255f);
         }
 
         if (!CheckIfPlayersReady())

@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (combat.character.name == "Toni")
             {
-                //AudioManager.instance.Play("");
+                AudioManager.instance.Play("Pulo_Galinho");
             }
             else if (combat.character.name == "Vector")
             {
@@ -174,9 +174,11 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Roll()
     {
         animator.SetBool("Rolando", true);
+        gameObject.GetComponent<PlayerCombat>().canRecieveDamage = false;
 
         yield return new WaitForSeconds(.3f);
 
         animator.SetBool("Rolando", false);
+        gameObject.GetComponent<PlayerCombat>().canRecieveDamage = true;
     }
 }
