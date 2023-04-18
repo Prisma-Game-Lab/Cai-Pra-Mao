@@ -16,8 +16,8 @@ public class BattleSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        // AudioManager.instance.StopAllSounds();
-        // AudioManager.instance.Play("Music_Menu");
+        AudioManager.instance.StopAllSounds();
+        AudioManager.instance.Play("Music_Game");
         p1Char = SelectedCharacters.instance.p1Character;
         p2Char = SelectedCharacters.instance.p2Character;
 
