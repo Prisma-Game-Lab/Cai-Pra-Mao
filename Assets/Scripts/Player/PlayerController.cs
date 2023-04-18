@@ -42,14 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         if (ctx.performed)
         {
-            if (playerCombat.character.name == "Toni")
-            {
-                playerCombat.ToniSpecialAttack();
-            }
-            else if (playerCombat.character.name == "Vector")
-            {
-                playerCombat.VectorSpecialAttack();
-            }
+            playerCombat.SpecialAttack();
         }
     }
 }

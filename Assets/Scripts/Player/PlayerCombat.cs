@@ -9,6 +9,8 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private int currentLives;
     [SerializeField] private float normalAttackRange;
     [SerializeField] private Transform attackPoint;
+    [SerializeField] private Transform specialAttackPoint;
+
     [SerializeField] private LayerMask playerLayer;
     private BattleSceneManager battleSceneManager;
     public CharStats character;
@@ -28,7 +30,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (canAttack)
         {
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, normalAttackRange, playerLayer);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(specialAttackPoint.position, normalAttackRange, playerLayer);
 
             foreach (Collider2D enemy in hitEnemies)
             {
@@ -51,30 +53,68 @@ public class PlayerCombat : MonoBehaviour
                 AudioManager.instance.Play("Attack_Lontra");
             }
 
-            StartCoroutine(AttackCooldown());
+            StartCoroutine(AttackCooldown(1));
         }
     }
 
-    private IEnumerator AttackCooldown()
+    private IEnumerator AttackCooldown(int mode)
     {
         canAttack = false;
-        animator.SetBool("Atacando", true);
+
+        if (mode == 1)
+        {
+            animator.SetBool("Atacando", true);
+        }
+        else
+        {
+            animator.SetBool("Especial", true);
+        }
 
         yield return new WaitForSeconds(.2f);
 
-        animator.SetBool("Atacando", false);
+        if (mode == 1)
+        {
+            animator.SetBool("Atacando", false);
+        }
+        else
+        {
+            animator.SetBool("Especial", false);
+        }
+
         canAttack = true;
     }
 
-    public void ToniSpecialAttack()
+    public void SpecialAttack()
     {
-        int damage = Random.Range(character.s_minDamage, character.s_maxDamage + 1);
-        return;
-    }
 
-    public void VectorSpecialAttack()
-    {
-        int damage = Random.Range(character.s_minDamage, character.s_maxDamage + 1);
+        if (canAttack)
+        {
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, normalAttackRange, playerLayer);
+
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                if (enemy.gameObject != this.gameObject)
+                {
+                    int damage = Random.Range(character.s_minDamage, character.s_maxDamage + 1);
+                    PlayerCombat enemyPlayerCombat = enemy.GetComponent<PlayerCombat>();
+                    enemyPlayerCombat.currentDamage += damage;
+                    battleSceneManager.uiManager.SetDamage(enemyPlayerCombat.playerIndex, enemyPlayerCombat.currentDamage.ToString());
+                    enemyPlayerCombat.Knockback(character.s_knockbackDistance, this.gameObject.GetComponent<Rigidbody2D>());
+                }
+            }
+
+            if (character.name == "Toni")
+            {
+                AudioManager.instance.Play("Attack_Galinho");
+            }
+            else if (character.name == "Vector")
+            {
+                AudioManager.instance.Play("Attack_Lontra");
+            }
+
+            StartCoroutine(AttackCooldown(2));
+        }
+
         return;
     }
 
@@ -87,7 +127,7 @@ public class PlayerCombat : MonoBehaviour
         diff.y = 7.5f;
 
         if (character.name == "Toni")
-         {
+        {
             AudioManager.instance.Play("Damage_Galinho");
         }
         else if (character.name == "Vector")
