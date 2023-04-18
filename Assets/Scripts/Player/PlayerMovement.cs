@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (combat.character.name == "Toni")
             {
-                //AudioManager.instance.Play("");
+                AudioManager.instance.Play("Pulo_Galinho");
             }
             else if (combat.character.name == "Vector")
             {
