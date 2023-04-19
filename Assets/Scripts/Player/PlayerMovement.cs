@@ -174,9 +174,11 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Roll()
     {
         animator.SetBool("Rolando", true);
+        gameObject.GetComponent<PlayerCombat>().canRecieveDamage = false;
 
         yield return new WaitForSeconds(.3f);
 
         animator.SetBool("Rolando", false);
+        gameObject.GetComponent<PlayerCombat>().canRecieveDamage = true;
     }
 }
