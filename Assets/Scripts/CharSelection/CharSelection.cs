@@ -23,6 +23,7 @@ public class CharSelection : MonoBehaviour
         playerReady = new bool[2];
         selectors[0].gameObject.transform.position = portraits[0].position;
         selectors[1].gameObject.transform.position = portraits[1].position;
+        
 
         for (int i = 0; i < 2; i++)
         {
@@ -40,11 +41,17 @@ public class CharSelection : MonoBehaviour
                 bigImage[0].sprite = charSprites[1];
                 charNames[0].text = "Toni Galinho";
             }
+            else if (selectors[0].gameObject.transform.position == portraits[1].position)
+            {
+                selectors[0].gameObject.transform.position = portraits[2].position;
+                bigImage[0].sprite = charSprites[2];
+                charNames[0].text = "Papelzito";
+            }
             else
             {
                 selectors[0].gameObject.transform.position = portraits[0].position;
                 bigImage[0].sprite = charSprites[0];
-                charNames[0].text = "Vector";
+                charNames[0].text = "Vector, a Lontra";
             }
         }
     }
@@ -59,12 +66,19 @@ public class CharSelection : MonoBehaviour
                 bigImage[1].sprite = charSprites[1];
                 charNames[1].text = "Toni Galinho";
             }
+            else if (selectors[1].gameObject.transform.position == portraits[1].position)
+            {
+                selectors[1].gameObject.transform.position = portraits[2].position;
+                bigImage[1].sprite = charSprites[2];
+                charNames[1].text = "Papelzito";
+            }
             else
             {
                 selectors[1].gameObject.transform.position = portraits[0].position;
                 bigImage[1].sprite = charSprites[0];
                 charNames[1].text = "Vector, a Lontra";
             }
+
         }
     }
 
