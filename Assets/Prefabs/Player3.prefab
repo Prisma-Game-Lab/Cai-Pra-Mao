@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4640552340007906124, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: playerIndex
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4640552340007906124, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: normalAttackRange
@@ -17,20 +17,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6189941103264535456, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: playerIndex
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6189941103264535457, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 6189941103264535457, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 6189941103264535459, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -433712559, guid: 21ac213c6b3f0804eaa2a1fb083ed45b, type: 3}
+      objectReference: {fileID: 21300000, guid: 06fe6ed2f6886714d87d5867f9892981, type: 3}
     - target: {fileID: 6189941103264535459, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -97,12 +97,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6189941103264535471, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_Name
-      value: Player2 Variant
+      value: Player3
       objectReference: {fileID: 0}
     - target: {fileID: 7049848654495367994, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 6f1e7d3a5f9023e49b95d470ffd21a13, type: 2}
+      objectReference: {fileID: 9100000, guid: 910df6d8b227787418bff276190e4240, type: 2}
     - target: {fileID: 8013282262460771114, guid: a1dd707c859e133448f41ec8f7f14487, type: 3}
       propertyPath: m_DefaultControlScheme
       value: Player2

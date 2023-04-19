@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Corrida
+  m_Name: Picote_Ataque
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -167436658, guid: 074b6af0664f1124e94ba25b2267fc97, type: 3}
+      value: {fileID: 499633484, guid: fe2e80a24d3ff2746abb7450ad5d0ca7, type: 3}
     - time: 0.016666668
-      value: {fileID: 872455706, guid: 074b6af0664f1124e94ba25b2267fc97, type: 3}
+      value: {fileID: 18252547, guid: fe2e80a24d3ff2746abb7450ad5d0ca7, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -167436658, guid: 074b6af0664f1124e94ba25b2267fc97, type: 3}
-    - {fileID: 872455706, guid: 074b6af0664f1124e94ba25b2267fc97, type: 3}
+    - {fileID: 499633484, guid: fe2e80a24d3ff2746abb7450ad5d0ca7, type: 3}
+    - {fileID: 18252547, guid: fe2e80a24d3ff2746abb7450ad5d0ca7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
