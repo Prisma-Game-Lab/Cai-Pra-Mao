@@ -7,8 +7,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toni_Jump
-  m_Speed: 1
+  m_Name: Picote_Pulo
+  m_Speed: 0.03
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2192181297203491974}
@@ -23,7 +23,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2dd0b1aa6f6e184439ab04f5d1f0ded4, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2f5d92568537fea40843d458fb6dacf7, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -36,7 +36,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toni_Attack2
+  m_Name: Picote_Ataque2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -50,7 +50,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2b25354f5b2b6484f99bf1afe73d2b14, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4026c25d2057e3f47b4e78ee8c888d4d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -141,8 +141,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toni_Run
-  m_Speed: 1
+  m_Name: Picote_Corrida
+  m_Speed: 0.15
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -58337927465532454}
@@ -156,7 +156,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1c013c85af4691a478803cfd6e6509e1, type: 2}
+  m_Motion: {fileID: 7400000, guid: bf0429f2982859045beef64cf4e5ed76, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -272,8 +272,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toni_idle
-  m_Speed: 1
+  m_Name: Picote_Idle
+  m_Speed: 0.05
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8215203700768225556}
@@ -288,7 +288,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e44d6d763fba5fe41a7f74bced575974, type: 2}
+  m_Motion: {fileID: 7400000, guid: 46a7c67de507b8244b3abd6771e3d851, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -549,7 +549,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toni_Attack1
+  m_Name: Picote_Ataque1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -563,7 +563,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4988900f00d4cd64d9819133f1da85a4, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7cb5032558942a747b8957f8c97b0d6f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -576,8 +576,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toni_Roll
-  m_Speed: 1
+  m_Name: Picote_Esquiva
+  m_Speed: 0.1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8699052369650871811}
@@ -591,7 +591,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1b83ae4764421fc4fa0fb472f95d2757, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7ad91747cd734d845ad433fe566a5f1f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
