@@ -26,10 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MadudaScenes/Character.unity
     guid: 6b6f2a29addd2e646bbf64fe08cc5c4d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MadudaScenes/Network.unity
     guid: 0e19a822ab6a48047ad15674ec752ce8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MadudaScenes/Join.unity
     guid: 8cc7049c50229f649a190d03f7aa9d33
   - enabled: 1
@@ -44,10 +44,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MadudaScenes/Xbox_Controle.unity
     guid: bce0540ed3a0fa74dafd136c7b1d4575
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MadudaScenes/ChooseMode.unity
     guid: 3f2ae9e4569dafd4cb3ddd35cda52fb0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cenario.unity
     guid: 62ea73fd46870764780e830cfe2444a0
   - enabled: 1
