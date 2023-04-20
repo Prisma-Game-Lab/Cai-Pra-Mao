@@ -1994,9 +1994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mariana Amorim
-
-    Vitor Salek'
+  m_text: "Jo\xE3o Athayde\nLuiza Aranyes\nMariana Amorim\nVitor Salek"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
   m_sharedMaterial: {fileID: 7054906154742885866, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
