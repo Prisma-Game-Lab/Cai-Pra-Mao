@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Toni
   m_EditorClassIdentifier: 
   name: Toni
-  n_minDamage: 8
-  n_maxDamage: 12
-  n_knockbackDistance: 15
-  n_antecipation: 0.2
+  n_minDamage: 7
+  n_maxDamage: 13
+  n_knockbackDistance: 10
+  n_antecipation: 0.3
   n_freeze: 0.2
-  n_recover: 0.1
-  s_minDamage: 16
-  s_maxDamage: 24
+  n_recover: 0.15
+  s_minDamage: 14
+  s_maxDamage: 26
   s_knockbackDistance: 30
-  s_antecipation: 0.3
-  s_freeze: 0.3
-  s_recover: 0.2
+  s_antecipation: 0.6
+  s_freeze: 0.4
+  s_recover: 0.3
   animatorController: {fileID: 9100000, guid: 6f1e7d3a5f9023e49b95d470ffd21a13, type: 2}

@@ -317,14 +317,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 0
   MaxplayerSpeed: 10
-  playerSpeed: 5.5
+  playerSpeed: 6
   accel: 11
   groundChecker: {fileID: 6189941103571460675}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpAmount: 9
-  doubleJumpAmount: 9
+  jumpAmount: 10
+  doubleJumpAmount: 10
   isFacingRight: 1
   dashTime: 0.1
   dashSpeed: 20
@@ -368,6 +368,7 @@ MonoBehaviour:
   character: {fileID: 0}
   currentDamage: 0
   playerIndex: 1
+  canRecieveDamage: 0
 --- !u!1 &6189941103571460674
 GameObject:
   m_ObjectHideFlags: 0
