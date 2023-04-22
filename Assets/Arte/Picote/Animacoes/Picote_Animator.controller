@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Picote_Pulo
-  m_Speed: 0.1
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2192181297203491974}
@@ -25,7 +25,7 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 2f5d92568537fea40843d458fb6dacf7, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: Speed
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
@@ -273,7 +273,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Picote_idle
-  m_Speed: 0.01
+  m_Speed: 0.11
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8215203700768225556}
@@ -577,7 +577,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Picote_Esquiva
-  m_Speed: 1
+  m_Speed: 0.01
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8699052369650871811}
