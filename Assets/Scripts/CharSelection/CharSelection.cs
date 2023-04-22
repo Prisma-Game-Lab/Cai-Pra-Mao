@@ -45,7 +45,7 @@ public class CharSelection : MonoBehaviour
             {
                 selectors[0].gameObject.transform.position = portraits[2].position;
                 bigImage[0].sprite = charSprites[2];
-                charNames[0].text = "Papelzito";
+                charNames[0].text = "Picote";
             }
             else
             {
@@ -70,7 +70,7 @@ public class CharSelection : MonoBehaviour
             {
                 selectors[1].gameObject.transform.position = portraits[2].position;
                 bigImage[1].sprite = charSprites[2];
-                charNames[1].text = "Papelzito";
+                charNames[1].text = "Picote";
             }
             else
             {
