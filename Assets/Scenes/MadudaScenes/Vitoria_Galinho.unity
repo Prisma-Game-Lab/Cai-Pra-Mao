@@ -897,7 +897,7 @@ MonoBehaviour:
 
     Esquivas:
 
-'
+    Defesas:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
   m_sharedMaterial: {fileID: 7054906154742885866, guid: 311ab26d6e2fa3b41a73b6b7c288ff09, type: 2}
@@ -924,8 +924,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -960,7 +960,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 321.42667, y: 22.648321, z: 187.45215, w: -82.738914}
+  m_margin: {x: 305.57663, y: 22.648321, z: 187.45215, w: -82.738914}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 34402a2eb3138af408931dcfcdd4256e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f332e3f73a0342940953df7aeb29a486, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1221,8 +1221,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1127.4907, y: -516.4784}
-  m_SizeDelta: {x: 432.8673, y: 215.4322}
+  m_AnchoredPosition: {x: 1072.2, y: -516.4784}
+  m_SizeDelta: {x: 344.91, y: 215.4322}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380432391
 MonoBehaviour:
@@ -1676,6 +1676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toni: {fileID: -433712559, guid: 21ac213c6b3f0804eaa2a1fb083ed45b, type: 3}
   vector: {fileID: 21300000, guid: 34402a2eb3138af408931dcfcdd4256e, type: 3}
+  picote: {fileID: 21300000, guid: 5bd8a7a9c1fe6b646bafd6a43c020e21, type: 2}
   winnerName: {fileID: 1267468301}
   stats: {fileID: 1244315561}
   winnerImage: {fileID: 1273467610}
@@ -2263,7 +2264,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

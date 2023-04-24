@@ -8,6 +8,8 @@ public class VictoryScreen : MonoBehaviour
 {
     public Sprite toni;
     public Sprite vector;
+    public Sprite picote;
+
 
     public TMP_Text winnerName;
     public TMP_Text stats;
@@ -33,39 +35,29 @@ public class VictoryScreen : MonoBehaviour
         {
             winnerName.text = "Toni Galinho";
             winnerImage.sprite = toni;
-            if (loserCharacter.name == "Vector")
-            {
-                loserImage.sprite = vector;
-            }
-            else
-            {
-                //loserImage.sprite = Picote;
-            }
-            
         }
         else if (winnerCharacter.name == "Vector")
         {
             winnerName.text = "Vector, a Lontra";
             winnerImage.sprite = vector;
-            if (loserCharacter.name == "Toni")
-            {
-                loserImage.sprite = toni;
-            }
-            else
-            {
-                //loserImage.sprite = Picote;
-            }
         }
         else
         {
-            if (loserCharacter.name == "Toni")
-            {
-                loserImage.sprite = toni;
-            }
-            else
-            {
-                loserImage.sprite = vector;
-            }
+            winnerName.text = "Picote";
+            winnerImage.sprite = picote;
+        }
+
+        if (loserCharacter.name == "Vector")
+        {
+            loserImage.sprite = vector;
+        }
+        else if (loserCharacter.name == "Toni")
+        {
+            loserImage.sprite = toni;
+        }
+        else
+        {
+            loserImage.sprite = picote;
         }
 
         stats.text = "Tempo de partida: " + matchTime + "\nGolpes dados: " + winnerAttacks.ToString() + "\nEsquivas: " + winnerDodges.ToString();
