@@ -23,7 +23,7 @@ public class CharSelection : MonoBehaviour
         playerReady = new bool[2];
         selectors[0].gameObject.transform.position = portraits[0].position;
         selectors[1].gameObject.transform.position = portraits[1].position;
-        
+
 
         for (int i = 0; i < 2; i++)
         {
@@ -56,6 +56,31 @@ public class CharSelection : MonoBehaviour
         }
     }
 
+    public void OnChangeDownP1(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && !playerReady[0])
+        {
+            if (selectors[0].gameObject.transform.position == portraits[0].position)
+            {
+                selectors[0].gameObject.transform.position = portraits[2].position;
+                bigImage[0].sprite = charSprites[2];
+                charNames[0].text = "Picote";
+            }
+            else if (selectors[0].gameObject.transform.position == portraits[1].position)
+            {
+                selectors[0].gameObject.transform.position = portraits[0].position;
+                bigImage[0].sprite = charSprites[0];
+                charNames[0].text = "Vector, a Lontra";
+            }
+            else
+            {
+                selectors[0].gameObject.transform.position = portraits[1].position;
+                bigImage[0].sprite = charSprites[1];
+                charNames[0].text = "Toni Galinho";
+            }
+        }
+    }
+
     public void OnChangeUpP2(InputAction.CallbackContext ctx)
     {
         if (ctx.performed && !playerReady[1])
@@ -82,6 +107,31 @@ public class CharSelection : MonoBehaviour
         }
     }
 
+    public void OnChangeDownP2(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed && !playerReady[0])
+        {
+            if (selectors[0].gameObject.transform.position == portraits[0].position)
+            {
+                selectors[0].gameObject.transform.position = portraits[2].position;
+                bigImage[0].sprite = charSprites[2];
+                charNames[0].text = "Picote";
+            }
+            else if (selectors[0].gameObject.transform.position == portraits[1].position)
+            {
+                selectors[0].gameObject.transform.position = portraits[0].position;
+                bigImage[0].sprite = charSprites[0];
+                charNames[0].text = "Vector, a Lontra";
+            }
+            else
+            {
+                selectors[0].gameObject.transform.position = portraits[1].position;
+                bigImage[0].sprite = charSprites[1];
+                charNames[0].text = "Toni Galinho";
+            }
+        }
+    }
+
     public void Confirm(int player)
     {
         playerReady[player] = true;
@@ -91,9 +141,13 @@ public class CharSelection : MonoBehaviour
         {
             selected = 0;
         }
-        else
+        else if (selectors[player].gameObject.transform.position == portraits[1].position)
         {
             selected = 1;
+        }
+        else
+        {
+            selected = 2;
         }
 
         if (player == 0)

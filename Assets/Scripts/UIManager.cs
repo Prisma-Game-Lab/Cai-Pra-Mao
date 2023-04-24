@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
 
     public Sprite galinho;
     public Sprite lontra;
+    public Sprite picote;
 
 
     private float elapsedTime;
@@ -43,6 +44,10 @@ public class UIManager : MonoBehaviour
             else if (combat.character.name == "Vector")
             {
                 SetSprites(combat.playerIndex, lontra);
+            }
+            else
+            {
+                SetSprites(combat.playerIndex, picote);
             }
         }
     }
